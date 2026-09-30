@@ -4,11 +4,19 @@ on:
   push:
     branches: [master]
     paths:
-      - "portfolio/python-excel-data-reconciliation-demo/**"
+      - "src/**"
+      - "tests/**"
+      - "data/**"
+      - "examples/**"
+      - "pyproject.toml"
       - ".github/workflows/reconciliation-ci.yml"
   pull_request:
     paths:
-      - "portfolio/python-excel-data-reconciliation-demo/**"
+      - "src/**"
+      - "tests/**"
+      - "data/**"
+      - "examples/**"
+      - "pyproject.toml"
       - ".github/workflows/reconciliation-ci.yml"
 
 permissions:
@@ -17,9 +25,6 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: portfolio/python-excel-data-reconciliation-demo
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
