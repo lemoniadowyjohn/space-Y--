@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280">
+<rect width="960" height="280" rx="16" fill="#0d1117"/>
+<text x="30" y="48" fill="#58a6ff" font-family="monospace" font-size="24">Python Excel Data Reconciliation</text>
+<text x="30" y="94" fill="#c9d1d9" font-family="monospace" font-size="18">matched rows: 3</text>
+<text x="30" y="136" fill="#f2cc60" font-family="monospace" font-size="18">value mismatch: A-02 / Status</text>
+<text x="30" y="178" fill="#f2cc60" font-family="monospace" font-size="18">missing left: A-03</text>
+<text x="30" y="222" fill="#7ee787" font-family="monospace" font-size="18">report: reconciliation_report.xlsx</text>
+</svg>
