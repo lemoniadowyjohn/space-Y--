@@ -1,0 +1,5 @@
+ComponentID,Status,Value
+A-01, ok ,10
+A-02,NOK,20
+A-03,OK,30
+A-04,HOLD,40
