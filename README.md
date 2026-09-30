@@ -1,5 +1,9 @@
 # Archived coursework — Space Y
 
-This is an older learning/coursework repository and is **not part of my current professional portfolio**.
+This repository is retained for historical traceability and is **not part of my current professional portfolio**.
 
-It is retained for historical traceability. Current professional evidence is centered on process automation, Python/data automation, industrial quality/validation, applied-AI workflow R&D, and CARLA/OpenDRIVE map-quality work.
+## Current engineering portfolio
+
+- [Governed Agent Workflow Demo](https://github.com/lemoniadowyjohn/space-Y-) — policy-aware routing, provider health/quota gates, fallback and approval boundaries.
+- [Industrial Quality Documentation Assistant](https://github.com/lemoniadowyjohn/hermes) — synthetic industrial RAG with citations, validation, refusal/escalation and evaluation.
+- [CARLA Map Quality Toolkit](https://github.com/lemoniadowyjohn/carla-control-suite/tree/portfolio/carla-map-quality-toolkit-20260930/portfolio/carla-map-quality-toolkit) — OpenDRIVE/OSM geometry, CRS, topology and evidence-based quality gates.
