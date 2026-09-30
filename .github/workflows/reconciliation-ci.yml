@@ -8,6 +8,11 @@ on:
       - "tests/**"
       - "data/**"
       - "examples/**"
+      - "docs/**"
+      - "README.md"
+      - "ARCHITECTURE.md"
+      - "LIMITATIONS.md"
+      - "SECURITY.md"
       - "pyproject.toml"
       - ".github/workflows/reconciliation-ci.yml"
   pull_request:
@@ -16,6 +21,11 @@ on:
       - "tests/**"
       - "data/**"
       - "examples/**"
+      - "docs/**"
+      - "README.md"
+      - "ARCHITECTURE.md"
+      - "LIMITATIONS.md"
+      - "SECURITY.md"
       - "pyproject.toml"
       - ".github/workflows/reconciliation-ci.yml"
 
