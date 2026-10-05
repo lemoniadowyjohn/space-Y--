@@ -43,13 +43,20 @@ def _read_table(
 ) -> tuple[dict[str, dict[str, Any]], list[str]]:
     wb = load_workbook(path, data_only=True)
     ws = wb[sheet]
-    headers = [cell.value for cell in ws[1]]
+    headers: list[str] = []
+    for cell in ws[1]:
+        if not isinstance(cell.value, str):
+            raise ValueError("header row must contain non-empty string column names")
+        headers.append(cell.value)
     if key_column not in headers:
         raise ValueError(f"missing key column: {key_column}")
 
     rows: dict[str, dict[str, Any]] = {}
     for values in ws.iter_rows(min_row=2, values_only=True):
-        row = dict(zip(headers, values, strict=True))
+        row: dict[str, Any] = {
+            header: value
+            for header, value in zip(headers, values, strict=True)
+        }
         key = str(row[key_column]).strip()
         if key in rows:
             raise ValueError(f"duplicate key: {key}")
@@ -117,6 +124,8 @@ def write_report(
     wb = Workbook()
 
     detail = wb.active
+    if detail is None:
+        raise RuntimeError("workbook did not create an active worksheet")
     detail.title = "Reconciliation"
     detail.append(["Key", "Field", "Left", "Right", "Kind"])
     for diff in result.differences:
