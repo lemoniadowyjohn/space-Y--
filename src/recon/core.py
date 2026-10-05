@@ -49,7 +49,7 @@ def _read_table(
 
     rows: dict[str, dict[str, Any]] = {}
     for values in ws.iter_rows(min_row=2, values_only=True):
-        row = dict(zip(headers, values))
+        row = dict(zip(headers, values, strict=True))
         key = str(row[key_column]).strip()
         if key in rows:
             raise ValueError(f"duplicate key: {key}")
